@@ -27,6 +27,14 @@ mysql.init_app(app)
 def hello():
     return "Hello world"
 
+@app.route('/getEntities')
+def getEntities():
+    cur = mysql.connect().cursor()
+    cur.execute('''select * from app_test_db.ENTITIES''')
+    r = [dict((cur.description[i][0], value)
+                for i, value in enumerate(row)) for row in cur.fetchall()]
+    return jsonify({'myCollection' : r})
+
 
 if __name__ == '__main__':
     app.run()
