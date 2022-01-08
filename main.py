@@ -15,7 +15,7 @@ mysql = MySQL()
 
 # MySQL configurations
 app.config['MYSQL_DATABASE_USER'] = 'root'
-app.config['MYSQL_DATABASE_PASSWORD'] = 'Sachin@200'
+app.config['MYSQL_DATABASE_PASSWORD'] = 'Kallis@123'
 app.config['MYSQL_DATABASE_DB'] = 'db_test_scanify'
 app.config['MYSQL_DATABASE_HOST'] = '35.193.62.223'
 
